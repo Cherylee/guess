@@ -1,0 +1,436 @@
+
+body{
+    background: #ffd475;
+}
+
+/*如何赚馒头*/
+.topsection{
+    position: relative;
+}
+.makesteamedbread{
+    display: inline-block;
+    margin-right: 2rem;
+    color: #e04034;
+    text-decoration: underline;
+    /* position: absolute; */
+    /*border:1px solid red;*/
+    /* z-index: 1; */
+    /* bottom: 18%;
+    right: 38%;
+    width: 25%;
+    height: 11%; */
+    cursor: pointer;
+    position: relative;
+}
+.makesteamedbread::after{
+    background:url(../images/more.jpg) no-repeat;
+    content: '';
+    position: absolute;
+    width: 0.9rem;
+    height: 1.1rem;
+    background: url(../images/more.jpg) no-repeat;
+    background-size: 100% 100%;
+    top: 0.2rem;
+}
+/*参与挑战*/
+.challenge{
+    display: block;
+    width:100%;
+    height:5rem;
+    background: url("../images/btn.jpg") no-repeat;
+    -webkit-background-size:100%;
+    background-size:100%;
+    position: relative;
+}
+.militaryexploits{
+    background: url("../images/btn1.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.militaryexploits_{
+    background: url("../images/btn1_.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    color: #5f1107;
+}
+.challenge_btn {
+    position: absolute;
+    width: 81%;
+    height: 60%;
+    /*border: 1px solid red;*/
+    top: 19%;
+    left: 8%;
+}
+.militaryexploits .challenge_btn>img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 2rem;
+    margin-top: 1rem;
+    float: left;
+    margin-left: 1.2rem;
+    margin-right: 10px;
+}
+.militaryexploits .challenge_btn>p{
+    padding-top: 1rem;
+    display: inline-block;
+    color: #fff;
+    width:75%;
+}
+.militaryexploits_ .challenge_btn>p{
+    color: #5f1107;
+}
+.militaryexploits .challenge_btn>p>span{
+    float: right;
+}
+/*本期竞猜*/
+.guessing{
+    padding:1rem;
+    overflow: hidden;
+    clear: both;
+}
+.guessing .title{
+    color: #520400;
+    font-weight:bold;
+    border-left:3px solid #520400;
+    text-indent: 0.5em;
+    line-height: 1rem;
+}
+.guessing .title span{
+    font-weight: 400;
+    font-size:0.9rem;
+}
+.guessing .title span a{
+    color:#520400;
+}
+.guessing_box .ti p.unser{
+    color: #f15348;
+    padding:0.8rem 0;
+    border-bottom:1px dashed #acacac;
+    margin-bottom:0.8rem;
+}
+.guessing_box .ti:last-child p.unser{
+    border-bottom:0px;
+}
+.guessing_box .ti p.unser span{
+    float: right;
+    display: inline-block;
+    width: 3rem;
+    height:1.5rem;
+    line-height: 1.5rem;
+    border:1px solid #f15348;
+    text-align: center;
+    border-radius: 1rem;
+}
+.guessing_box{
+    background: #fff9ea;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    overflow: hidden;
+    clear: both;
+    margin-top:1rem;
+    padding:1rem;
+    position: relative;
+    z-index:1;
+}
+
+.bot_line{
+    height:0.8rem;
+    background: #dddddd;
+    -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px;
+    margin-top:-5px;
+    position: relative;
+    z-index: 0;
+}
+
+.guessing_box .ti p{
+    line-height: 1.8rem;
+    color: #520400;
+}
+.guessing_box .ti .ul_style1{
+    margin:1rem 0;
+}
+.guessing_box .ti .ul_style1 li{
+    display: inline-block;
+    width:45%;
+    background: #ffd475;
+    color: #520400;
+    height:2.5rem;
+    border-radius:2rem ;
+    line-height: 2.5rem;
+    text-indent: 1em;
+    margin-right: 1.7rem;
+}
+.guessing_box .ti .ul_style1 li:nth-child(2n){
+    margin-right:0;
+}
+.guessing_box .ti ul li.active{
+    background: #f6665d;
+    color: #ffffff;
+    position: relative;
+}
+.guessing_box .ti ul li.noactive{
+    background: #dddddd;
+    color: #999;
+}
+.guessing_box .ti ul li.active:after{
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/yes.jpg") no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+}
+.guessing_box .ti .ul_style2 li{
+    display: inline-block;
+    width:99%;
+    background: #ffd475;
+    color: #520400;
+    height:2.5rem;
+    border-radius:2rem ;
+    line-height: 2.5rem;
+    text-indent: 1em;
+    margin-top:1rem;
+}
+.guessing_box .ti .ul_style3 li{
+    background: #dddddd;
+    color: #a8a8a8;
+}
+/*rule 竞猜规则*/
+.rule{
+    background: #fff9ea;
+    padding-bottom:1rem;
+}
+.rule p{
+    padding:0 1rem;
+    line-height: 2rem;
+}
+.rule>img{
+    margin-bottom:1rem;
+}
+/*Steamedbreadquantity 馒头数量*/
+.Steamedbreadquantity p{
+    text-align: center;
+    color: #6c2f0f;
+    font-weight: bold;
+}
+.Steamedbreadquantity p>span{
+    display:inline-block;
+    width:1.8rem;
+    height:1.9rem;
+    line-height:1.9rem;
+    background: #f6665d;
+    color: #ffffff;
+    text-align: center;
+    margin-right:5px;
+    font-size:1.1rem;
+
+}
+/*如何赚馒头*/
+.otheractivity{
+    padding:1rem 1rem 0.5rem 1rem;
+    overflow: hidden;
+    clear: both;
+    background: #ffffff;
+    margin-top:0.5rem;
+}
+.otheractivity .title{
+    color: #555555;
+    border-left:3px solid #f2554c;
+    text-indent: 0.5em;
+    line-height: 1rem;
+}
+.otheractivity>img{
+    margin:0.8rem 0 0.5rem 0;
+}
+.otheractivity .text{
+    line-height:1.8rem;
+}
+.otheractivity .text span{
+    display: inline-block;
+    float: right;
+    width:4rem;
+    height: 1.6rem;
+    line-height:1.6rem;
+    border-radius:1rem;
+    background: #f2554c;
+    color: #ffffff;
+    text-align: center;
+}
+.otheractivity1>img{
+    margin-top:0;
+}
+.howmake{
+    background: #ffe0a9;
+    overflow: hidden;
+    clear: both;
+}
+.howmake>ul{
+    overflow: hidden;
+    clear: both;
+    width:90%;
+    margin:0 auto;
+    display: block;
+    margin-bottom:1rem;
+}
+.howmake>ul>li{
+    display: inline-block;
+    width:25%;
+    float: left;
+    text-align: center;
+    color: #703412;
+}
+.howmake>ul>li img{
+    width:90%;
+    margin:0 auto;
+}
+.howmake>ul>li>a{
+    color: #703412;
+}
+.howmake>ul>li p{
+    padding:0.5rem 0;
+}
+.howmake>ul>li button{
+    display: inline-block;
+    border:0;
+    background: #f6665d;
+    color: #ffffff;
+    width:4rem;
+    height:1.6rem;
+    line-height: 1.6rem;
+    border-radius: 1rem;
+    font-size:1rem;
+}
+/*精彩规则*/
+.record .title{
+    font-weight: 400;
+    border:0;
+    color: #333333;
+}
+.guessing_box .ti p.unser span.nopri{
+    border: 0;
+    width:4rem;
+}
+/*login 按钮*/
+.militaryexploits .challenge_btn>p.loginbtn{
+    text-align: center;
+    width: 100%;
+}
+/*20170724*/
+.btnss{
+    text-align: center;
+}
+.btnss>a{
+    display: inline-block;
+}
+.btnss .challenge_enjoy{
+    width:12.125rem;
+    height:4rem;
+    background: url("../images/btn-1.png") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.challenge_pai{
+    width:12.125rem;
+    height:4rem;
+    background: url("../images/btn-2.png") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.tijiao{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 3%;
+}
+/*排行榜*/
+.rankinglist{
+    padding:1rem;
+}
+.rankinglist .list1{
+    width: 2rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 1rem;
+}
+.rankinglist ul li{
+    /*padding:1rem;*/
+    border-bottom:1px solid #e3e3e3;
+    height: 6rem;
+    line-height: 6rem;
+}
+.icone{
+    display: inline-block;
+    text-align: center;
+    width:2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-style: normal;
+    margin-right:1rem;
+    color: #fff;
+    background: url("../images/listi.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.banner img{
+    width: 100%;
+}
+.person{
+    display: inline-block;
+    width: 3.5rem;
+    height:3.5rem;
+    overflow: hidden;
+    -webkit-border-radius:3.5rem;
+    -moz-border-radius:3.5rem;
+    border-radius:3.5rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.person img{
+    width: 100%;
+    height: 100%;
+}
+.rel1 span.fr,.rel2 span.fr,.rel3 span.fr{
+    color:#ff6423;
+}
+.rel1 i.icone{
+    height:2.3rem;
+    background: url("../images/list1.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    border: 0px;
+    color: #bb730d;;
+}
+.rel2 i.icone{
+    height:2.3rem;
+    background: url("../images/list2.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    border: 0px;
+    color: #819bbc;;
+}
+.rel3 i.icone{
+    height:2.3rem;
+    background: url("../images/list3.jpg") no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    border: 0px;
+    color: #e89b6d;;
+}
+/*20170818*/
+.pop1 .MB_tan_title{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #520400;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 0
+}
+#makesure .r2-all{
+    width: 20rem;
+}

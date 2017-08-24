@@ -1,0 +1,319 @@
+/*公用样式*/
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #3E3E3E;
+}
+img{
+	display: block;
+}
+input {
+	outline: none;
+	font-family: "微软雅黑";
+	border: 0px;
+	-webkit-appearance:none; /*去除input默认样式*/
+}
+ul,li{
+	text-decoration: none;
+	list-style: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.hidden{
+	display: none;
+}
+.unvisible{
+	visibility: hidden;
+}
+body {	
+	font-family: "微软雅黑";
+	color: #3E3E3E;
+}
+
+.m-body {
+	width: 100%;
+	margin: 0 auto;	
+}
+.box{
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	padding-bottom: 1rem;
+}
+/*弹出框*/
+.hidden {
+	width: 100%;
+	color: #333;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	/*height:100%;*/
+	z-index: 50;
+	display: none;
+
+}
+.r-kong {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.pop .r2-all {
+	width: 24rem;
+	background: #FFFFFF;
+	position: fixed;
+	left: 0;
+	right: 0;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	margin:0 auto;
+	top: 8rem;
+	height: auto;
+	overflow: hidden;
+}
+
+.del{
+	width:1.4rem;
+	position: absolute;
+	right: 1rem;
+	top: 1.2rem;
+}
+.del img{
+	width: 100%;
+}
+.title img{
+	width: 11rem;
+	margin: 1rem;
+}
+.pop1 .MB_tan_text{
+	/* padding-top: 2rem; */
+	padding-bottom:2rem;
+}
+.pop1 .MB_tan_text p{
+	padding:1rem 1rem;
+	text-align: center;
+	font-size:1rem;
+	color: #666666;
+	font-weight: bold;
+}
+.pop1 button{
+	width:50%;
+	float: left;
+	border:0;
+	height:3rem;
+	font-size: 1rem;
+}
+.pop1 button.left{
+	background: #ffd475;
+	color: #520400;
+}
+.pop1 button.right{
+
+	background: #dddddd;;
+	color: #999999;
+}
+/*share 底部*/
+.block_download_bottom {
+	background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0 !important;
+	/*实现FF背景透明，文字不透明*/
+	filter: Alpha(opacity=60);
+	background: #fff;
+	/*实现IE背景透明*/
+	height: 4rem;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 20;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	max-width: 33.3rem;
+}
+.block_download_bottom_block{
+	height: 4rem;
+}
+
+.text_ad {
+	display: inline-block;
+	width: 70%;
+	color: #f0831e;
+	font-size: 1rem;
+}
+
+.text_ad img {
+	width: 2.5rem;
+	float: left;
+	margin: 0 0.7rem 0 2rem;
+	margin-top: 0.18rem;
+}
+
+.text_ad p {
+	color: #FFFFFF;
+	font-size: 0.8rem;
+}
+.text_ad p.title{
+	font-size: 1rem;
+	font-weight: bold;
+}
+.fr_te{
+	display: inline-block;
+	width: 20%;
+	text-align: right;
+}
+.fr_te .btn_app_dl {
+	color: #fff;
+	width: 70%;
+	background: #F5821F;
+	float: left;
+	padding: 3px 5px;
+	text-align: center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 0.8rem;
+	margin-top: 1.3rem;
+
+}
+
+.btn_close_dl {
+	position: absolute;
+	display: inline-block;
+	top: 1.5rem;
+	left: 0.5rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: url(../images/delet.png) no-repeat center;
+	background-size: 100%;
+	border-radius: 0.8rem;
+}
+.btn_close_dl img{
+	width: 0.8rem;
+}
+/*20170724*/
+.pop2 .r2-all{
+	background: url("../images/tang.png") no-repeat;
+	width: 23.41rem;
+	height: 19.5rem;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	position: relative;
+	overflow: visible;
+}
+.zhup{
+	font-size: 1.2rem;
+	font-weight:bold;
+	padding: 1rem 0 0 0;
+	text-align: center;
+	color: #f6665d;
+}
+.sub{
+	font-size: 1rem;
+	color: #999999;
+	text-align: center;
+}
+.tih{
+	display: block;
+	margin:0 auto;
+	width:14rem;
+	margin-top:10px;
+}
+.input_t{
+	width:18rem;
+	height:2.5rem;
+	background: url("../images/btn-3.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	margin: 0 auto;
+	display: block;
+	margin-top: 2.3rem;
+	color: #FFFFFF;
+	text-align: center;
+}
+.btn_b{
+	display: block;
+	width:13rem;
+	height:2.8rem;
+	background: url("../images/btn-4.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	margin: 0 auto;
+	display: block;
+	margin-top:0.7rem;
+}
+.btn_e{
+	display: block;
+	width:13rem;
+	height:2.8rem;
+	background: url("../images/btn-41.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	margin: 0 auto;
+	display: block;
+	margin-top:0.7rem;
+	text-align: center;
+    line-height: 2.6rem;
+    color: #e04034;
+}
+.set3 .eyiji{
+	margin-top: 3rem;
+	text-align: center;
+	font-size: 0.88rem;
+	color: #ffffff;
+	margin-bottom: 1.3rem;
+}
+.delete_o{
+	width:2.5rem;
+	height: 2.5rem;
+	display: block;
+	position: absolute;
+	top:0;
+	right:0;
+	background: url("../images/delei1.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	top: -12px;
+	right: 11px;
+}
+.btns a{
+	 display: inline-block;
+	 width:8.3rem;
+	 height:2.5rem;
+	 line-height: 2.5rem;
+	 color: #ffffff;
+	 font-weight:bold;
+ }
+.btn_c{
+	background: url("../images/btnd-1.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.btn_d{
+	background: url("../images/btnd-2.png") no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	margin-left:0.3rem;
+}
+.set2 p.yij{
+	margin-top:1.8rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+.set2 p.hu{
+	text-align: center;
+	color: #ffd71f;
+	padding-top:5px;
+}
+.btns{
+	text-align: center;
+	margin-top:1rem;
+}

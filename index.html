@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>竞猜首页</title>
+    <link rel="stylesheet" href="css/resposible.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            var this_obj = ''
+            $('.guessing_box .ti1 ul>li').click(function () {
+                this_obj = $(this);
+                var num = Math.floor(Math.random() * 10);//生成0-9随机数
+                var html = tip.tipText[num];
+                $("#tipText").html(html)
+                //alert(this_obj.html())
+                if (this_obj.hasClass('active')) {
+                    this_obj.removeClass('active');
+                    this_obj.siblings().removeClass('noactive');
+                } else {
+                    $('#makesure').show();
+                    $('#makesure .left').click(function () {
+                        //alert(this_obj.html())
+                        $('#makesure').hide();
+                        if (this_obj.hasClass('noactive')) {
+                            this_obj.removeClass('noactive');
+                        }
+                        this_obj.addClass('active');
+                        this_obj.siblings().addClass('noactive');
+                        this_obj.siblings().removeClass('active');
+                        this_obj = ''
+                    });
+                }
+
+            });
+            //取消按钮
+            $('.quxiao').click(function () {
+                $('.pop1').hide();
+            });
+            //tip随机显示
+            var tip = {//json数组
+                "tipText": [
+                    "生活也可以如此丰富多猜",
+                    "老乡，你果然是猜华横溢!",
+                    "小爱预祝您招猜进宝！",
+                    "非学无以广猜！",
+                    "一分辛劳一份猜！",
+                    "天生我猜必有用！",
+                    "江山代有人猜出！",
+                    "君子爱猜，取之有道！",
+                    "你未必出类拔萃，但肯定与众不同！",
+                    "不是所有答案都叫正确答案~"
+                ]
+            }
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="m-body">
+
+        <!---topsection 撸起袖子猜，馒头无限嗨-->
+        <section class="topsection">
+            <img src="images/topsection.jpg" width="100%">
+
+        </section>
+
+        <!---Steamedbreadquantity 馒头数量-->
+        <section class="Steamedbreadquantity">
+            <P>馒头：588<a class="makesteamedbread  fr" name="如何赚馒头">如何赚馒头</a> </P>
+        </section>
+
+        <!---militaryexploits 战绩-->
+        <section class="challenge militaryexploits militaryexploits_">
+            <a name="参与挑战" class="challenge_btn challenge_btn1"><img src="images/laba_.jpg"><p>战绩：5胜1负<span>共赚 500 馒头~</span></p></a>
+        </section>
+
+        <!--- 未登录状态下-->
+        <!--<section class="challenge militaryexploits">-->
+        <!--<a class="challenge_btn "><p class="loginbtn">立即登录</p></a>-->
+        <!--</section>-->
+
+        <!---btns 链接-->
+        <section class="btnss">
+            <a name="邀请好友挑战" class="challenge_enjoy"></a>
+            <a name="竞猜排行榜" class="challenge_pai"></a>
+        </section>
+
+        <!--guessing 本期竞猜-->
+        <section class="guessing">
+            <P class="title">本期竞猜<span>(25馒头/题)</span><span class="fr">倒计时：1天3小时18分</span></P>
+            <section class="guessing_box">
+
+                <div class="ti ti1">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style1">
+                        <li>A. 马刺</li>
+                        <li>B. 马刺</li>
+                    </ul>
+                </div>
+
+                <div class="ti ti1">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style2">
+                        <li>A. 马刺马刺马刺马刺马刺马刺马刺</li>
+                        <li>B. 马刺马刺马刺马刺马刺马刺</li>
+                        <li>C. 马刺马刺马刺马刺马刺马刺</li>
+                    </ul>
+                </div>
+
+            </section>
+            <div class="bot_line"></div>
+        </section>
+        <!--guessing 下期预告-->
+        <section class="guessing">
+            <P class="title">下期预告<span></span><span class="fr">开始时间：2017-05-13</span></P>
+            <section class="guessing_box">
+
+                <div class="ti">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style1">
+                        <li class="noactive">A. 马刺</li>
+                        <li class="noactive">B. 马刺</li>
+                    </ul>
+                </div>
+
+                <div class="ti">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style2">
+                        <li class="noactive">A. 马刺马刺马刺马刺马刺马刺马刺</li>
+                        <li class="noactive">B. 马刺马刺马刺马刺马刺马刺</li>
+                        <li class="noactive">C. 马刺马刺马刺马刺马刺马刺</li>
+                    </ul>
+                </div>
+
+            </section>
+            <div class="bot_line"></div>
+        </section>
+        <!--guessing 上期中奖公布-->
+        <section class="guessing">
+            <P class="title">上期中奖公布<span>(2017.5.4)</span><span class="fr"><a>往期中奖记录>></a></span></P>
+            <section class="guessing_box">
+
+                <div class="ti">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <p class="unser">正解：马刺<span>+50</span></p>
+                </div>
+
+                <div class="ti">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <p class="unser">正解：马刺<span>+50</span></p>
+                </div>
+
+                <div class="ti">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <p class="unser">正解：马刺<span>+50</span></p>
+                </div>
+
+            </section>
+            <div class="bot_line"></div>
+        </section>
+        <!--rule 竞猜规则-->
+        <article class="rule">
+            <img src="images/rule.jpg" width="100%">
+            <p>1. 用户登录才可参与竞猜；</p>
+            <p>2. 参与1道题目竞猜，消耗25馒头；</p>
+            <p>3. 若用户猜中，获得50馒头；</p>
+            <p>4. 每个用户每天限定参与4道题，最高可消耗100馒头；</p>
+            <p>5. 竞猜过的题目，无法重复竞猜；</p>
+            <p>6. 竞猜结果隔2天发布，开奖后馒头奖励发放到用户账号中；</p>
+            <p>7. 竞猜的最终解释权归爱动漫所有</p>
+        </article>
+        <!--弹出框 确定选择-->
+        <nav class="hidden kuang pop pop1" id="makesure" style="display: block;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_text MB_tan_title">确认选择?</p>
+                    <div class="MB_tan_text">
+                        <p id="tipText">土豪,你确定选择么？</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left">确认</button>
+                    <button class="btn_close right quxiao">容我再想想~</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 馒头不足-->
+        <nav class="hidden kuang pop pop1" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_title"></p>
+                    <div class="MB_tan_text">
+                        <p>您馒头不足，赶紧去赚取第一桶金！</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left" onclick='window.open("Howmakesteamedbread.html")'>赚馒头</button>
+                    <button class="btn_close right quxiao">取消</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 未登录-->
+        <nav class="hidden kuang pop pop1" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_title"></p>
+                    <div class="MB_tan_text">
+                        <p>土豪，您还没登录~</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left">立即登录</button>
+                    <button class="btn_close right quxiao">取消</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+    </div>
+</body>
+
+</html>

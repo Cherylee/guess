@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>竞猜分享</title>
+    <link rel="stylesheet" href="css/resposible.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            var this_obj = ''
+            $('.guessing_box .ti1 ul>li').click(function () {
+                this_obj = $(this);
+                //alert(this_obj.html())
+                if (this_obj.hasClass('active')) {
+                    this_obj.removeClass('active');
+                    this_obj.siblings().removeClass('noactive');
+                } else {
+                    $('#makesure').show();
+                    $('#makesure .left').click(function () {
+                        //alert(this_obj.html())
+                        $('#makesure').hide();
+                        if (this_obj.hasClass('noactive')) {
+                            this_obj.removeClass('noactive');
+                        }
+                        this_obj.addClass('active');
+                        this_obj.siblings().addClass('noactive');
+                        this_obj.siblings().removeClass('active');
+                        this_obj = ''
+                    });
+                }
+
+            });
+            //取消按钮
+            $('.quxiao').click(function () {
+                $('.pop1').hide();
+            });
+            //关闭按钮
+            $('.btn_close_dl').click(function () {
+                $('.block_download_bottom_block,.block_download_bottom').hide();
+            });
+            $('.delete_o').click(function () {
+                $('.pop2').hide();
+            });
+            $('.btn_d').click(function () {
+                $('.share').show();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="m-body">
+
+        <!---topsection 撸起袖子猜，馒头无限嗨-->
+        <section class="topsection">
+            <img src="images/topsection1.jpg" width="100%">
+            <a class="makesteamedbread" name="如何赚馒头"></a>
+        </section>
+        <!---toptext-->
+        <!--<section class="topsection">-->
+        <!--<img src="images/toptext.jpg" width="100%">-->
+        <!--</section>-->
+        <!---challenge 参与挑战-->
+        <!--<section class="challenge">-->
+        <!--<a name="参与挑战" class="challenge_btn"></a>-->
+        <!--</section>-->
+        <!--guessing 本期竞猜-->
+        <section class="guessing">
+            <P class="title">本期竞猜<span></span><span class="fr">倒计时：1天3小时18分</span></P>
+            <section class="guessing_box">
+
+                <div class="ti ti1">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style1">
+                        <li>A. 马刺</li>
+                        <li>B. 马刺</li>
+                    </ul>
+                </div>
+
+                <div class="ti ti1">
+                    <p>问：你觉得5月10日NBA季后赛第二轮火箭-马刺比赛谁会赢？</p>
+                    <ul class="ul_style1 ul_style2">
+                        <li>A. 马刺马刺马刺马刺马刺马刺马刺</li>
+                        <li>B. 马刺马刺马刺马刺马刺马刺</li>
+                        <li>C. 马刺马刺马刺马刺马刺马刺</li>
+                    </ul>
+                </div>
+
+            </section>
+            <div class="bot_line"></div>
+        </section>
+
+        <!---submit 提交-->
+        <section class="challenge militaryexploits">
+            <a name="提交" class="challenge_btn tijiao">提交</a>
+        </section>
+
+        <!--rule 竞猜规则-->
+        <!--<article class="rule">-->
+        <!--<img src="images/rule.jpg" width="100%">-->
+        <!--<p>1. 下载爱动漫APP，即可参与竞猜答题，更有机会获得Q币、VIP奖励和神秘大奖</p>-->
+        <!--<p>2. 竞猜过的题目，无法重复竞猜</p>-->
+        <!--<p>3. 竞猜结果隔2天在发布，奖励发放到爱动漫账号中</p>-->
+        <!--<p>4. 题目高能，低二次元汪星人请勿靠近；</p>-->
+        <!--<p>5. 竞猜的最终解释权归爱动漫所有</p>-->
+        <!--<p>6. 有任何疑问可加入爱动漫QQ群 184269941</p>-->
+        <!--</article>-->
+        <!--share 底部-->
+        <div class="block_download_bottom_block">
+        </div>
+        <div class="block_download_bottom">
+            <div class="text_ad fl">
+                <a class="btn_close_dl"></a>
+                <img src="images/app_icon_small.png" />
+                <p class="title">爱动漫</p>
+                <p>超全高清漫画神器</p>
+            </div>
+            <div class="fr_te fr">
+                <a class="btn_app_dl fr" href="share_donghuaDetail1.html">飞奔下载</a>
+            </div>
+        </div>
+        <!--end-->
+        <!--弹出框 确定选择-->
+        <nav class="hidden kuang pop pop1" id="makesure" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_title"></p>
+                    <div class="MB_tan_text">
+                        <p>土豪,你确定选择么？</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left">确认</button>
+                    <button class="btn_close right quxiao">取消</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 馒头不足-->
+        <nav class="hidden kuang pop pop1" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_title"></p>
+                    <div class="MB_tan_text">
+                        <p>您馒头不足，赶紧去赚取第一桶金！</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left" onclick='window.open("Howmakesteamedbread.html")'>赚馒头</button>
+                    <button class="btn_close right quxiao">取消</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 未登录-->
+        <nav class="hidden kuang pop pop1" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <div class="block_dialog MB_tan_div">
+                    <!--描述： 该手机已达到今日签到上限！ -->
+                    <p class="MB_tan_title"></p>
+                    <div class="MB_tan_text">
+                        <p>土豪，您还没登录~</p>
+                    </div>
+                    <!--end-->
+                    <button class="btn_close left">立即登录</button>
+                    <button class="btn_close right quxiao">取消</button>
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 未领取-->
+        <nav class="hidden kuang pop pop2" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <span class="delete_o"></span>
+                <div class="block_dialog MB_tan_div">
+                    <p class="zhup">战绩2胜0负 可获得50馒头!</p>
+
+                    <p class="sub" style="font-size:0.3rem">（新人礼包+100，答题奖励+0）</p>
+                    
+                    <p class="sub">您的馒头可在爱动漫兑换</p>
+                    <img src="images/tabs.jpg" class="tih">
+                    <!---输入手机号领取奖励-->
+                    <div class="set1">
+                        <input type="text" class="input_t" style="margin-top:1.6rem" value="新用户输入手机号领取奖励" onblur="if(this.value == '')this.value='输入手机号领取奖励';" onclick="if(this.value == '输入手机号领取奖励')this.value='';">
+                        <a class="btn_b"></a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+        <!--弹出框 已经领取奖励-->
+        <nav class="hidden kuang pop pop2" style="display: none;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <span class="delete_o"></span>
+                <div class="block_dialog MB_tan_div">
+                    <p class="zhup">领取成功！</p>
+                    <p class="sub" style="font-size:0.3rem">（馒头3天内发放到您的爱动漫账户）</p>
+                    <p class="sub">您的馒头可在爱动漫兑换</p>
+                    <img src="images/tabs.jpg" class="tih">
+
+                    <!---已经领取奖励-->
+                    <div class="set2">
+                        <p class="yij" style="margin-top:1rem">已领取奖励 登录爱动漫兑换奖品</p>
+                        <P class="hu">账户: 13850063642 密码: 123456</P>
+                        <div class="btns" style="margin-top:0.6rem">
+                            <a class="btn_c">立即使用</a>
+                            <a class="btn_d">分享战绩</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+
+        <!--弹出框 已参与过本期活动-->
+        <nav class="hidden kuang pop pop2" style="display: block;"><em class="r-kong"></em>
+            <div class="r2-all">
+                <span class="delete_o"></span>
+                <div class="block_dialog MB_tan_div">
+                    <p class="zhup">已参与过本期活动</p>
+                    <p class="sub">您的馒头可在爱动漫兑换</p>
+                    <img src="images/tabs.jpg" class="tih">
+
+                    <!---已参与过本期活动-->
+                    <div class="set3">
+                        <p class="yij eyiji" style="margin-top:2.2rem">您已是爱动漫用户，请直接前往爱动漫<br>客户端参与答题并领取奖励！</p>
+                        <a class="btn_e">立即前往</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!--end-->
+
+        <!--弹出框 领取-->
+        <nav class="hidden kuang share" style="display: none;"><em class="r-kong"></em>
+            <img src="images/sharebg.png" width="100%">
+        </nav>
+        <!--end-->
+    </div>
+</body>
+
+</html>
